@@ -78,15 +78,9 @@ def gen_annos():
 
 
 def gen_gt_annos():
-    json_anno_path = "/content/LAVIS/lavis/output/BLIP2/Caption_sample20230919/20230920024/result/val_epoch0.json"
-    sampled_img_ids = []
-    with open(json_anno_path) as f:
-        data = json.load(f)
-        
-        for line in data:
-            sampled_img_ids.append(line["image_id"])
-    
-  
+    # import pdb
+    # pdb.set_trace()
+    sampled_img_ids = list(range(48))
     train_anno_path = "/content/sample20230919/annotations/sample048_train.json"
     annos = []
     imgs = []
@@ -110,7 +104,7 @@ def gen_gt_annos():
 
 # resolve_coco_json()
 # vid2images()
-gen_annos()
+# gen_annos()
 # resolve_coco_json()
 # resolve_coco_gt_json()
-# gen_gt_annos()
+gen_gt_annos()

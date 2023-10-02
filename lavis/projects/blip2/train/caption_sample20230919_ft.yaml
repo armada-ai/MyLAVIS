@@ -23,10 +23,10 @@ datasets:
         train:
           name: "blip_caption"
           prompt: "a photo of "
-          max_words: 200
+          max_words: 50
         eval:
           name: "blip_caption"
-          max_words: 200
+          max_words: 50
     build_info:
         annotations:
           train:
@@ -59,7 +59,7 @@ run:
   num_workers: 4
   accum_grad_iters: 1
 
-  max_len: 200
+  max_len: 50
   min_len: 8
   num_beams: 5
 
